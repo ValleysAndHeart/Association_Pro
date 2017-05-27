@@ -1,0 +1,153 @@
+/*
+ * study.css
+ * Root namespace styles
+ *
+ /
+
+ /**Begin reset */
+
+ *{
+ 	margin : 0;
+ 	padding : 0;
+ 	-webkit-box-sizing : border-box;
+ 	-moz-box-sizing : border-box;
+ 	box-sizing : border-box;
+ }
+ h1,h2,h3,h4,h5,h6,p{ margin-bottom : 10px; }
+ ol,ul,dl{ list-style-position : inside; }
+
+/** End reset */
+
+/** Begin standard selectors */
+
+body{
+	font : 13px 'Trebuchet MS', Verdana, Helvetica, Arial, sans-serif;
+	color : #444;
+	background-color : #888;
+}
+a{ text-decoration :none; }
+	a:link, a:visited { color : inherit; }
+	a:hover { text-decoration : underline; }
+strong {
+	font-weight : 800 ;
+	color : #000 ;
+}
+
+/** End standard selectors */
+
+/** Begin study namepace selectors */
+#study{
+	position : absolute;
+	top : 8px;
+	left : 8px;
+	bottom : 8px;
+	right : 8px;
+
+	min-height : 500px;
+	min-width : 500px;
+	overflow : hidden;
+
+	background-color : #fff;
+	border-radius :0 8px 0 8px;
+}
+/** End study namespace selectors */
+
+/** Bagin utility selectors */
+
+.study-x-select {}
+.study-x-clearfloat {
+	height : 0		!important;
+	float : none	!important;
+	visibility : hidden	!important;
+	clear : both	!important;
+}
+/** End utility selectors */
+
+
+/**  Bagin liquid Layout css */
+.study-shell-head, .study-shell-head-logo, .study-shell-head-acct,
+.study-shell-head-search, .study-shell-main, .study-shell-main-nav,
+.study-shell-main-content, .study-shell-foot, .study-shell-chat,
+.study-shell-modal {
+	position : absolute;
+}
+.study-shell-head {
+	top : 0;
+	left : 0;
+	right : 0;
+	height : 40px;
+}
+.study-shell-head-logo {
+	top : 4px;
+	left : 4px;
+	width : 128px;
+	height : 32px;
+	background : orange;
+}
+.study-shell-head-acct {
+	top : 4px;
+	right : 0;
+	width : 64px;
+	height : 32px;
+	background : green;
+}
+.study-shell-head-search {
+	top : 4px;
+	right : 64px;
+	width : 248px;
+	height : 32px;
+	background : blue;
+}
+.study-shell-main {
+	top : 40px;
+	left : 0;
+	bottom : 40px;
+	right : 0;
+}
+.study-shell-main-nav,
+.study-shell-main-content {
+	top : 0;
+	bottom : 0;
+}
+.study-shell-main-nav {
+	width : 250px;
+	background : #eee;
+}
+.study-x-closed .study-shell-main-nav {
+	width : 0;
+}
+.study-shell-main-content {
+	left : 250px;
+	right : 0;
+	background : #ddd;
+}
+.study-x-closed .study-shell-main-content {
+	left : 0;
+}
+.study-shell-foot {
+	bottom : 0;
+	left : 0;
+	right : 0;
+	height : 40px;
+}
+.study-shell-chat {
+	bottom : 0;
+	right : 0;
+	width : 300px;
+	height : 15px;
+	background : red;
+	z-index : 1;
+}
+.study-shell-modal {
+	margin-top : -200px;
+	margin-left : -200px;
+	top : 50%;
+	left : 50%;
+	width : 400px;
+	height : 400px;
+	background : #fff;
+	border-radius : 3px;
+	z-index : 2;
+}
+
+/** End liquid Layout css */
